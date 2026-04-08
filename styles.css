@@ -1,12 +1,13 @@
 /* ══════════════════════════════════════════════════
-   KIA ADVISOR — Gerardo Pineda
-   Paleta: Azul oscuro premium · Corporativo
+   KIA ADVISOR LANDING — Gerardo Pineda
+   Fuentes: Rajdhani (headings) + Inter (body)
+   Temas: [data-theme="dark"] | [data-theme="light"]
 ═══════════════════════════════════════════════════ */
 
 /* ─── TOKENS ─────────────────────────────────────── */
 :root {
   --accent:       #1a56db;
-  --accent-h:     #1e40af;
+  --accent-h:     #1648c0;
   --wa-green:     #25D366;
   --font-head:    'Rajdhani', sans-serif;
   --font-body:    'Inter', sans-serif;
@@ -16,26 +17,26 @@
 }
 
 [data-theme="dark"] {
-  --bg:           #060a12;
-  --surface:      #0a1020;
-  --surface2:     #0e1628;
-  --bd:           #162038;
-  --bd2:          #1e2d48;
-  --text:         #e2e8f5;
-  --sub:          #7a8fa8;
-  --mute:         #3a4f6a;
-  --nav-bg:       rgba(6,10,18,0.96);
-  --card-bg:      linear-gradient(145deg,#080e1c 0%,#0d1428 100%);
-  --img-bg:       linear-gradient(135deg,#070c18,#101b30);
-  --hero-bg:      linear-gradient(135deg,#060a12 0%,#0a1020 40%,#060d1a 100%);
-  --adv-bg:       linear-gradient(135deg,#080e1c,#0a1020);
-  --footer-bg:    #030608;
-  --spec-a:       #0a1020;
-  --spec-b:       #070d1a;
-  --spec-bd:      #162035;
-  --modal-bg:     rgba(0,0,0,0.88);
-  --filter-btn-bg:#0a1020;
-  --wa-opt-bg:    #0e1628;
+  --bg:           #080d13;
+  --surface:      #0d1520;
+  --surface2:     #111e2c;
+  --bd:           #1a2d3d;
+  --bd2:          #243545;
+  --text:         #e8edf2;
+  --sub:          #8a96a3;
+  --mute:         #4a5a6a;
+  --nav-bg:       rgba(8,13,19,0.95);
+  --card-bg:      linear-gradient(145deg,#0d1117 0%,#111820 100%);
+  --img-bg:       linear-gradient(135deg,#0a0f16,#141e2c);
+  --hero-bg:      linear-gradient(135deg,#080d13 0%,#0d1520 40%,#0a1018 100%);
+  --adv-bg:       linear-gradient(135deg,#0a0f16,#0d1520);
+  --footer-bg:    #050810;
+  --spec-a:       #0d1520;
+  --spec-b:       #0a1018;
+  --spec-bd:      #1a2535;
+  --modal-bg:     rgba(0,0,0,0.85);
+  --filter-btn-bg:#0d1520;
+  --wa-opt-bg:    #111e2c;
   --wa-opt-hover: #0a1e35;
   --guarantee-bg: #0a1630;
   --guarantee-bd: #1e3a6a;
@@ -46,31 +47,31 @@
 }
 
 [data-theme="light"] {
-  --bg:           #f0f4fa;
+  --bg:           #f0f4f8;
   --surface:      #ffffff;
-  --surface2:     #f5f8fd;
-  --bd:           #d8e4f4;
-  --bd2:          #c0d4ec;
-  --text:         #06101e;
-  --sub:          #3a5070;
-  --mute:         #8090a8;
+  --surface2:     #f7fafc;
+  --bd:           #dde6ef;
+  --bd2:          #c8d8e8;
+  --text:         #0d1520;
+  --sub:          #4a6070;
+  --mute:         #8a9aaa;
   --nav-bg:       rgba(255,255,255,0.97);
-  --card-bg:      linear-gradient(145deg,#ffffff 0%,#f5f8fd 100%);
-  --img-bg:       linear-gradient(135deg,#eef3fb,#dce8f6);
-  --hero-bg:      linear-gradient(135deg,#f0f4fa 0%,#e6eef8 50%,#f0f4fa 100%);
-  --adv-bg:       linear-gradient(135deg,#f5f8fd,#eef3fb);
-  --footer-bg:    #060a12;
-  --spec-a:       #f5f8fd;
-  --spec-b:       #eaf0f8;
-  --spec-bd:      #d8e4f4;
-  --modal-bg:     rgba(0,10,30,0.55);
+  --card-bg:      linear-gradient(145deg,#ffffff 0%,#f7fafc 100%);
+  --img-bg:       linear-gradient(135deg,#eef2f7,#dde8f0);
+  --hero-bg:      linear-gradient(135deg,#f0f4f8 0%,#e8eef4 50%,#f0f4f8 100%);
+  --adv-bg:       linear-gradient(135deg,#f7fafc,#eef2f7);
+  --footer-bg:    #0d1520;
+  --spec-a:       #f7fafc;
+  --spec-b:       #edf2f7;
+  --spec-bd:      #dde6ef;
+  --modal-bg:     rgba(0,20,40,0.55);
   --filter-btn-bg:#ffffff;
-  --wa-opt-bg:    #f5f8fd;
-  --wa-opt-hover: #eef3fb;
+  --wa-opt-bg:    #f7fafc;
+  --wa-opt-hover: #eff6ff;
   --guarantee-bg: #eff6ff;
   --guarantee-bd: #bfdbfe;
   --guarantee-tx: #1d4ed8;
-  --shadow-card:  0 2px 12px rgba(26,86,219,0.07);
+  --shadow-card:  0 2px 12px rgba(0,0,0,0.06);
   --shadow-hover: 0 20px 40px rgba(26,86,219,0.13);
   --disabled-op:  0.45;
 }
@@ -367,15 +368,17 @@ img { display: block; }
   border: 1px solid var(--bd);
   border-radius: 24px; overflow: hidden;
   box-shadow: var(--shadow-card);
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 /* LEFT PANEL */
 .advisor-panel-left {
   background: linear-gradient(160deg,#0d1a2e 0%,#0a1220 50%,#111e30 100%);
-  width: 260px; min-width: 220px; flex-shrink: 0;
+  width: 320px; min-width: 280px; flex-shrink: 0;
   display: flex; flex-direction: column;
   align-items: center; justify-content: center;
-  padding: 40px 28px 50px; gap: 14px;
+  padding: 52px 36px 60px; gap: 18px;
   position: relative; overflow: hidden;
 }
 
@@ -402,30 +405,30 @@ img { display: block; }
 
 .avatar-wrap { position: relative; z-index: 2; }
 .avatar {
-  width: 124px; height: 124px; border-radius: 50%;
+  width: 160px; height: 160px; border-radius: 50%;
   background: linear-gradient(145deg,#1a2a40,#0d1828);
-  border: 3px solid var(--accent);
+  border: 4px solid var(--accent);
   display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 0 36px rgba(187,0,0,0.3);
+  box-shadow: 0 0 48px rgba(187,0,0,0.35);
   position: relative;
 }
 .avatar-online {
-  position: absolute; bottom: 5px; right: 5px;
-  width: 18px; height: 18px; border-radius: 50%;
-  background: var(--wa-green); border: 2.5px solid #0a1220;
+  position: absolute; bottom: 8px; right: 8px;
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--wa-green); border: 3px solid #0a1220;
 }
 
 .panel-name { text-align: center; position: relative; z-index: 2; }
 .panel-firstname {
   color: #e0e8f2; font-family: var(--font-head);
-  font-size: 18px; font-weight: 800; letter-spacing: .5px;
+  font-size: 22px; font-weight: 800; letter-spacing: .5px;
 }
-.panel-lastname { color: #6a7a8a; font-size: 12px; letter-spacing: 1px; }
+.panel-lastname { color: #6a7a8a; font-size: 13px; letter-spacing: 1px; }
 
 .panel-stars {
-  display: flex; gap: 3px; position: relative; z-index: 2;
+  display: flex; gap: 4px; position: relative; z-index: 2;
 }
-.panel-stars svg { width: 13px; height: 13px; }
+.panel-stars svg { width: 16px; height: 16px; }
 
 .certified-badge {
   background: rgba(187,0,0,0.15); border: 1px solid rgba(187,0,0,0.4);
@@ -443,7 +446,7 @@ img { display: block; }
 
 /* RIGHT PANEL */
 .advisor-panel-right {
-  flex: 1; padding: 34px 32px; min-width: 260px;
+  flex: 1; padding: 44px 40px; min-width: 280px;
 }
 .advisor-meta {
   color: var(--mute); font-family: var(--font-head);
@@ -673,16 +676,135 @@ img { display: block; }
   color: var(--mute); font-size: 11px; text-align: center; margin-top: 16px;
 }
 
-/* ─── RESPONSIVE ─────────────────────────────────── */
-@media (max-width: 640px) {
-  .nav { padding: 0 16px; }
-  .nav-link { display: none; }
-  .advisor-panel-left { width: 100%; min-width: unset; padding: 36px 20px 44px; }
-  .advisor-panel-right { padding: 28px 20px; }
-  .modal-footer-row { flex-direction: column; align-items: flex-start; }
+/* ════════════════════════════════════════════════════
+   RESPONSIVE — Mobile First
+   480px  → móviles pequeños (iPhone SE, Galaxy A)
+   640px  → móviles grandes (iPhone 15, Galaxy S)
+   768px  → tablets portrait / Instagram/WhatsApp embeds
+   1024px → tablets landscape
+════════════════════════════════════════════════════ */
+
+/* ── Tablet portrait + embeds de Instagram/WhatsApp (≤ 768px) ── */
+@media (max-width: 768px) {
+  .section-inner { padding: 0; }
+
+  /* Catálogo */
+  .catalog-section { padding: 52px 18px; }
+  .vehicle-grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+
+  /* Advisor: apilar verticalmente */
+  .advisor-section { padding: 52px 18px; }
+  .advisor-card { flex-direction: column; border-radius: 20px; }
+
+  .advisor-panel-left {
+    width: 100%; min-width: unset;
+    padding: 44px 24px 48px;
+    border-radius: 0;
+    /* Horizontal en tablet */
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .avatar-wrap { order: -1; }
+  .panel-name  { flex-basis: 100%; }
+
+  .advisor-panel-right { padding: 32px 28px 36px; }
+
+  /* Modales */
+  .modal-box { border-radius: 16px; }
+  .modal-footer-row { flex-direction: column; align-items: stretch; gap: 14px; }
   .btn-wa { width: 100%; justify-content: center; }
-  .hero-ctas { flex-direction: column; align-items: center; }
-  .hero-stats { gap: 24px; }
+}
+
+/* ── Móvil grande: iPhone 14/15 Pro, Galaxy S22+ (≤ 640px) ── */
+@media (max-width: 640px) {
+  /* Nav */
+  .nav { padding: 0 16px; height: 56px; }
+  .nav-link { display: none; }
+  .nav-kia-logo { height: 22px; }
+  .btn-primary.btn-sm { padding: 7px 13px; font-size: 11px; }
+
+  /* Hero */
+  .hero { padding: 48px 18px; min-height: auto; }
+  .hero-tag { font-size: 10px; letter-spacing: 2px; padding: 5px 14px; margin-bottom: 20px; }
+  .hero-title { font-size: clamp(34px, 9vw, 52px); margin-bottom: 16px; }
+  .hero-desc  { font-size: 14px; margin-bottom: 28px; }
+  .hero-ctas  { flex-direction: column; align-items: center; gap: 10px; margin-bottom: 36px; }
+  .hero-ctas .btn-primary,
+  .hero-ctas .btn-outline { width: 100%; max-width: 280px; text-align: center; padding: 13px 20px; }
+  .hero-stats { gap: 20px; margin-top: 36px; }
+  .stat-n { font-size: 26px; }
+
+  /* Catalog */
+  .catalog-section { padding: 44px 16px; }
+  .section-title { font-size: clamp(24px, 6vw, 34px); margin-bottom: 20px; }
+  .filter-bar { gap: 6px; }
+  .filter-btn { padding: 6px 12px; font-size: 11px; }
+  .vehicle-grid { grid-template-columns: 1fr; gap: 12px; }
+
+  /* Card */
+  .card-img-wrap { height: 170px; }
+  .card-body { padding: 15px 16px 18px; }
+  .card-name  { font-size: 17px; }
+  .card-price { font-size: 20px; }
+
+  /* Advisor */
+  .advisor-section { padding: 44px 16px; }
+  .advisor-panel-left {
+    padding: 40px 20px 44px;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .avatar { width: 140px; height: 140px; }
+  .panel-firstname { font-size: 20px; }
+  .advisor-panel-right { padding: 28px 20px 32px; }
+  .advisor-name { font-size: clamp(20px, 5vw, 26px); }
+  .advisor-bio p { font-size: 13px; }
+  .social-row { flex-direction: column; gap: 8px; }
+  .social-btn { width: 100%; justify-content: center; }
+
+  /* Modales */
+  .modal-overlay { padding: 12px; }
+  .modal-box { border-radius: 14px; max-height: 92vh; }
+  .modal-header { padding: 16px 18px; }
+  .modal-title { font-size: 20px; }
+  .modal-img-wrap { padding: 20px; min-height: 170px; }
+  .modal-img-wrap img { max-height: 150px; }
+  .modal-body { padding: 16px 18px; }
+  .specs-grid { grid-template-columns: 1fr 1fr; }
+  .spec-cell { padding: 9px 11px; }
+  .spec-val  { font-size: 12px; }
+  .modal-footer-row { padding: 14px 16px; }
+  .price-big { font-size: 26px; }
+
+  /* WA Sheet */
+  .wa-sheet { padding: 22px 16px 32px; border-radius: 20px 20px 0 0; }
+  .wa-option { padding: 12px 14px; font-size: 13px; }
+}
+
+/* ── Móvil pequeño: iPhone SE, Galaxy A14 (≤ 390px) ── */
+@media (max-width: 390px) {
+  .nav { padding: 0 12px; }
+  .hero { padding: 40px 14px; }
+  .hero-title { font-size: 30px; }
+  .catalog-section  { padding: 36px 12px; }
+  .advisor-section  { padding: 36px 12px; }
+  .advisor-panel-right { padding: 22px 16px 28px; }
+  .filter-btn { padding: 5px 10px; font-size: 10px; }
+  .card-body  { padding: 13px 14px 16px; }
+  .modal-body { padding: 14px 14px; }
+  .specs-grid { grid-template-columns: 1fr; }
+  .social-row { gap: 7px; }
+}
+
+/* ── Landscape móvil (altura reducida) ── */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero { min-height: auto; padding: 32px 20px; }
+  .hero-stats { display: none; }
+  .modal-overlay { align-items: flex-start; padding-top: 8px; }
+  .modal-box { max-height: 95vh; }
 }
 
 /* ─── LOGO KIA IMAGEN (reemplaza badge texto) ─────── */
@@ -775,4 +897,402 @@ img { display: block; }
 }
 [data-theme="light"] .fb-btn:hover {
   background: #bfdbfe !important;
+}
+
+/* ─── iOS SAFE AREA + TOUCH OPTIMIZATION ─────────── */
+
+/* Notch / Dynamic Island / home bar en iPhone */
+.nav {
+  padding-left: max(28px, env(safe-area-inset-left));
+  padding-right: max(28px, env(safe-area-inset-right));
+}
+.wa-fab {
+  bottom: max(24px, calc(env(safe-area-inset-bottom) + 16px));
+  right:  max(24px, env(safe-area-inset-right));
+}
+.wa-sheet {
+  padding-bottom: max(36px, calc(env(safe-area-inset-bottom) + 20px));
+}
+footer {
+  padding-bottom: max(36px, calc(env(safe-area-inset-bottom) + 20px));
+}
+
+/* Touch targets mínimos 44px para iOS HIG */
+.filter-btn,
+.social-btn,
+.nav-link,
+.modal-close,
+.theme-toggle { min-height: 44px; }
+
+/* Evitar zoom al hacer tap en inputs en iOS */
+input, select, textarea { font-size: 16px !important; }
+
+/* Scroll suave en iOS */
+.modal-box,
+.wa-sheet { -webkit-overflow-scrolling: touch; }
+
+/* Eliminar highlight azul en tap (Android) */
+* { -webkit-tap-highlight-color: transparent; }
+
+/* Cursor pointer en todos los botones táctiles */
+.filter-btn, .social-btn, .wa-option,
+.vehicle-card, .card-cta, .wa-fab { cursor: pointer; }
+
+/* ─── WA OPCIÓN DESTACADA (cotizar vehículo específico) ── */
+.wa-option-highlight {
+  background: linear-gradient(135deg, #0f2a1a, #0a1e12) !important;
+  border: 1.5px solid #25D366 !important;
+  border-radius: 14px !important;
+  padding: 15px 16px !important;
+  gap: 12px;
+}
+[data-theme="light"] .wa-option-highlight {
+  background: linear-gradient(135deg, #f0fff4, #dcfce7) !important;
+  border-color: #22c55e !important;
+}
+.wa-option-highlight:hover {
+  background: linear-gradient(135deg, #143a22, #0d2818) !important;
+  box-shadow: 0 0 20px rgba(37,211,102,0.25);
+}
+[data-theme="light"] .wa-option-highlight:hover {
+  background: linear-gradient(135deg, #dcfce7, #bbf7d0) !important;
+}
+.wa-option-text {
+  display: flex; flex-direction: column; gap: 2px; flex: 1;
+}
+.wa-option-label {
+  font-size: 14px; font-weight: 700; color: #4ade80;
+}
+[data-theme="light"] .wa-option-label { color: #15803d; }
+.wa-option-sub {
+  font-size: 11px; color: #6a9a7a; font-weight: 400;
+}
+[data-theme="light"] .wa-option-sub { color: #4a7a5a; }
+
+/* Divisor entre opción destacada y opciones generales */
+.wa-divider {
+  text-align: center;
+  font-size: 11px;
+  color: var(--mute);
+  padding: 6px 0 2px;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+.wa-divider::before,
+.wa-divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 28%;
+  height: 1px;
+  background: var(--bd);
+}
+.wa-divider::before { left: 0; }
+.wa-divider::after  { right: 0; }
+
+/* ══════════════════════════════════════════════════
+   MODAL DE NOMBRE — antes de redirigir a WhatsApp
+══════════════════════════════════════════════════ */
+.name-modal-box {
+  background: var(--surface);
+  border: 1px solid var(--bd);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 420px;
+  padding: 28px 26px 24px;
+  box-shadow: 0 32px 64px rgba(0,0,0,0.45);
+  animation: nameModalIn .22s cubic-bezier(.34,1.4,.64,1) both;
+}
+[data-theme="dark"] .name-modal-box { background: #0d1520; }
+
+@keyframes nameModalIn {
+  from { opacity: 0; transform: scale(.92) translateY(10px); }
+  to   { opacity: 1; transform: scale(1)   translateY(0); }
+}
+
+.name-modal-header {
+  display: flex; align-items: center; gap: 14px; margin-bottom: 18px;
+}
+.name-modal-wa-ico {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: #25D366;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; flex-shrink: 0;
+}
+.name-modal-title {
+  color: var(--text); font-family: var(--font-head);
+  font-size: 18px; font-weight: 800;
+}
+.name-modal-sub {
+  color: var(--sub); font-size: 12px; margin-top: 2px;
+}
+
+.name-modal-desc {
+  color: var(--sub); font-size: 14px; line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+/* Input */
+.name-input-wrap {
+  margin-bottom: 20px;
+}
+.name-input {
+  width: 100%;
+  background: var(--surface2);
+  border: 1.5px solid var(--bd);
+  border-radius: 12px;
+  padding: 14px 16px;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 15px;
+  outline: none;
+  transition: border-color .2s, box-shadow .2s;
+  -webkit-appearance: none;
+}
+.name-input::placeholder { color: var(--mute); }
+.name-input:focus {
+  border-color: #25D366;
+  box-shadow: 0 0 0 3px rgba(37,211,102,0.15);
+}
+
+/* Botones de acción */
+.name-modal-actions {
+  display: flex; gap: 10px; align-items: center;
+}
+.name-btn-skip {
+  background: transparent;
+  border: 1px solid var(--bd);
+  color: var(--mute);
+  padding: 11px 14px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-family: var(--font-body);
+  flex-shrink: 0;
+  transition: all .2s;
+}
+.name-btn-skip:hover {
+  border-color: var(--mute);
+  color: var(--sub);
+}
+.name-btn-confirm {
+  flex: 1;
+  background: #25D366;
+  color: #fff;
+  border: none;
+  padding: 13px 18px;
+  border-radius: 10px;
+  font-family: var(--font-head);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  transition: background .2s, transform .15s, box-shadow .2s;
+}
+.name-btn-confirm:hover {
+  background: #1db954;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(37,211,102,0.4);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .name-modal-box { padding: 22px 18px 20px; border-radius: 16px; }
+  .name-modal-actions { flex-direction: column; }
+  .name-btn-skip, .name-btn-confirm { width: 100%; justify-content: center; }
+  .name-btn-skip { order: 2; }
+  .name-btn-confirm { order: 1; }
+}
+
+/* ════════════════════════════════════════════════════
+   TRIMS / VERSIONES EN MODAL
+════════════════════════════════════════════════════ */
+/* ════════════════════════════════════════════════════
+   VERSIONES — diseño premium tipo cards
+════════════════════════════════════════════════════ */
+
+/* Contenedor general */
+.trims-section {
+  grid-column: 1 / -1;
+  margin-bottom: 20px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--bd);
+}
+
+/* Header de la sección */
+.trims-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 18px;
+  background: var(--accent);
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 11px; font-weight: 800;
+  letter-spacing: 2px; text-transform: uppercase;
+  color: #fff;
+}
+.trims-note {
+  font-size: 9px; font-weight: 500;
+  letter-spacing: 1px; opacity: .75;
+  text-transform: uppercase;
+}
+
+/* Grid de versiones */
+.trims-grid { display: flex; flex-direction: column; }
+
+/* ── Fila de versión (acordeón) ── */
+.trim-row {
+  border-bottom: 1px solid var(--bd);
+  cursor: pointer;
+  transition: background .15s;
+}
+.trim-row:last-child { border-bottom: none; }
+.trim-row:nth-child(odd)  { background: var(--surface); }
+.trim-row:nth-child(even) { background: var(--surface2); }
+
+/* Header clickeable de cada fila */
+.trim-row-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  gap: 12px;
+  transition: background .15s;
+}
+.trim-row:hover .trim-row-header {
+  background: rgba(187,0,0,0.04);
+}
+.trim-row.trim-selected .trim-row-header {
+  background: rgba(187,0,0,0.07);
+  border-left: 3px solid var(--accent);
+}
+[data-theme="light"] .trim-row.trim-selected .trim-row-header {
+  background: rgba(187,0,0,0.04);
+}
+
+/* Izquierda: nombre + año */
+.trim-info { display: flex; flex-direction: column; gap: 2px; }
+.trim-version {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 15px; font-weight: 800;
+  color: var(--text); letter-spacing: .3px;
+}
+.trim-year {
+  font-size: 11px; color: var(--mute);
+  font-family: 'Rajdhani', sans-serif; letter-spacing: .5px;
+}
+
+/* Derecha: precio + bono + chevron */
+.trim-right {
+  display: flex; flex-direction: column;
+  align-items: flex-end; gap: 4px; flex-shrink: 0;
+}
+.trim-price {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 16px; font-weight: 800;
+  color: var(--accent);
+  text-shadow: 0 0 12px rgba(187,0,0,.2);
+}
+.trim-bono {
+  font-size: 9px; font-weight: 700;
+  color: #4ade80;
+  background: rgba(74,222,128,.12);
+  border: 1px solid rgba(74,222,128,.3);
+  padding: 2px 8px; border-radius: 20px;
+  letter-spacing: .5px; white-space: nowrap;
+}
+[data-theme="light"] .trim-bono {
+  color: #15803d; background: #dcfce7; border-color: #86efac;
+}
+
+/* Chevron animado */
+.trim-chevron {
+  font-size: 16px; color: var(--accent);
+  margin-left: 8px; flex-shrink: 0;
+  display: inline-block;
+  transition: transform .25s cubic-bezier(.25,.8,.25,1);
+}
+
+/* ── Panel de características expandido ── */
+.trim-features-wrap {
+  padding: 0 18px 16px;
+  border-top: 1px solid var(--bd);
+  animation: feat-slide .22s cubic-bezier(.25,.8,.25,1) both;
+}
+@keyframes feat-slide {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Título dentro del panel */
+.trim-feat-title {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--mute);
+  padding: 12px 0 10px;
+  border-bottom: 1px solid var(--bd);
+  margin-bottom: 12px;
+}
+
+/* Grid de chips */
+.trim-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+  padding: 0; margin: 0;
+}
+.trim-chips li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--sub);
+  background: var(--surface2);
+  border: 1px solid var(--bd);
+  border-radius: 20px;
+  padding: 4px 11px;
+  line-height: 1.3;
+  transition: border-color .15s, color .15s;
+}
+.trim-chips li::before {
+  content: '✓';
+  font-size: 10px;
+  color: var(--accent);
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+/* Primer item = base del equipamiento, más destacado */
+.trim-chips li.chip-base {
+  background: rgba(187,0,0,.07);
+  border-color: rgba(187,0,0,.25);
+  color: var(--text);
+  font-weight: 600;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 12px; letter-spacing: .3px;
+}
+.trim-chips li.chip-base::before {
+  content: '⭐';
+  font-size: 10px;
+}
+[data-theme="light"] .trim-chips li.chip-base {
+  background: rgba(187,0,0,.05);
+  border-color: rgba(187,0,0,.2);
+}
+
+/* precio en modal */
+#mPrice { line-height: 1.1; }
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  .trim-row-header { padding: 12px 14px; }
+  .trim-version { font-size: 14px; }
+  .trim-price   { font-size: 15px; }
+  .trims-title  { padding: 10px 14px; font-size: 10px; }
+  .trim-features-wrap { padding: 0 14px 14px; }
+  .trim-chips li { font-size: 11px; padding: 3px 9px; }
 }

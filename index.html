@@ -1,285 +1,268 @@
 <!DOCTYPE html>
 <html lang="es" data-theme="dark">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
   <title>Gerardo Pineda · Asesor KIA Colombia</title>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <link rel="alternate icon" href="favicon.svg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+  <link rel="alternate icon" href="favicon.svg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
-
 <body>
 
-  <!-- ═══════════════ NAV ═══════════════ -->
-  <nav class="nav">
-    <div class="nav-brand">
-      <img src="KIA.png" alt="KIA" class="nav-kia-logo" />
-      <span class="nav-label">ASESOR</span>
+<!-- ═══════════════ NAV ═══════════════ -->
+<nav class="nav">
+  <div class="nav-brand">
+    <img src="KIA.png" alt="KIA" class="nav-kia-logo"/>
+    <span class="nav-label">ASESOR</span>
+  </div>
+  <div class="nav-actions">
+    <a href="#catalogo" class="nav-link">Catálogo</a>
+    <a href="#asesor"   class="nav-link">Asesor</a>
+    <button class="theme-toggle" id="themeToggle" title="Cambiar tema">
+      <span class="icon-sun">☀</span>
+      <span class="icon-moon">☽</span>
+    </button>
+    <button class="btn-primary btn-sm" onclick="openWa()">Contactar</button>
+  </div>
+</nav>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Asesor Certificado KIA · Colombia 2026</div>
+    <h1 class="hero-title">Tu próximo <span class="accent">KIA</span><br>te está esperando</h1>
+    <p class="hero-desc">Catálogo completo 2026 con precios actualizados. Financiación, compra de contado, entrega inmediata y la garantía más larga del mercado.</p>
+    <div class="hero-ctas">
+      <a href="#catalogo" class="btn-primary">Ver Catálogo</a>
+      <a href="#asesor"   class="btn-outline">Conoce al Asesor</a>
     </div>
-    <div class="nav-actions">
-      <a href="#catalogo" class="nav-link">Catálogo</a>
-      <a href="#asesor" class="nav-link">Asesor</a>
-      <button class="theme-toggle" id="themeToggle" title="Cambiar tema">
-        <span class="icon-sun">☀</span>
-        <span class="icon-moon">☽</span>
-      </button>
-      <button class="btn-primary btn-sm" onclick="openWa()">Contactar</button>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-n">17</span><span class="stat-l">Modelos</span></div>
+      <div class="stat"><span class="stat-n">7 años</span><span class="stat-l">Garantía</span></div>
+      <div class="stat"><span class="stat-n">$58M</span><span class="stat-l">Desde</span></div>
     </div>
-  </nav>
+  </div>
+</section>
 
-  <!-- ═══════════════ HERO ═══════════════ -->
-  <section class="hero">
-    <div class="hero-grid"></div>
-    <div class="hero-glow"></div>
-    <div class="hero-content">
-      <div class="hero-tag">Asesor Certificado KIA · Colombia 2026</div>
-      <h1 class="hero-title">Tu próximo <span class="accent">KIA</span><br>te está esperando</h1>
-      <p class="hero-desc">Catálogo completo 2026 con precios actualizados. Financiación, compra de contado, entrega
-        inmediata y la garantía más larga del mercado.</p>
-      <div class="hero-ctas">
-        <a href="#catalogo" class="btn-primary">Ver Catálogo</a>
-        <a href="#asesor" class="btn-outline">Conoce al Asesor</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat"><span class="stat-n">17</span><span class="stat-l">Modelos</span></div>
-        <div class="stat"><span class="stat-n">7 años</span><span class="stat-l">Garantía</span></div>
-        <div class="stat"><span class="stat-n">$58M</span><span class="stat-l">Desde</span></div>
-      </div>
+<!-- ═══════════════ CATALOG ═══════════════ -->
+<section id="catalogo" class="catalog-section">
+  <div class="section-inner">
+    <div class="section-label">Línea completa 2026</div>
+    <h2 class="section-title">Catálogo de Vehículos</h2>
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-btn active" data-cat="Todos">Todos (17)</button>
+      <button class="filter-btn" data-cat="Automóvil">Automóvil (4)</button>
+      <button class="filter-btn" data-cat="SUV">SUV (5)</button>
+      <button class="filter-btn" data-cat="Crossover">Crossover (1)</button>
+      <button class="filter-btn" data-cat="Híbrido">Híbrido (2)</button>
+      <button class="filter-btn" data-cat="Eléctrico">Eléctrico (4)</button>
+      <button class="filter-btn" data-cat="Pick-Up">Pick-Up (1)</button>
     </div>
-  </section>
+    <div class="vehicle-grid" id="vehicleGrid"></div>
+  </div>
+</section>
 
-  <!-- ═══════════════ CATALOG ═══════════════ -->
-  <section id="catalogo" class="catalog-section">
-    <div class="section-inner">
-      <div class="section-label">Línea completa 2026</div>
-      <h2 class="section-title">Catálogo de Vehículos</h2>
-      <div class="filter-bar" id="filterBar">
-        <button class="filter-btn active" data-cat="Todos">Todos (17)</button>
-        <button class="filter-btn" data-cat="Automóvil">Automóvil (4)</button>
-        <button class="filter-btn" data-cat="SUV">SUV (5)</button>
-        <button class="filter-btn" data-cat="Crossover">Crossover (1)</button>
-        <button class="filter-btn" data-cat="Híbrido">Híbrido (2)</button>
-        <button class="filter-btn" data-cat="Eléctrico">Eléctrico (4)</button>
-        <button class="filter-btn" data-cat="Pick-Up">Pick-Up (1)</button>
-      </div>
-      <div class="vehicle-grid" id="vehicleGrid"></div>
-    </div>
-  </section>
+<!-- ═══════════════ ADVISOR ═══════════════ -->
+<section id="asesor" class="advisor-section">
+  <div class="section-inner">
+    <div class="section-label" style="text-align:center">Tu asesor personal</div>
+    <h2 class="section-title" style="text-align:center;margin-bottom:40px">Conoce a Gerardo</h2>
 
-  <!-- ═══════════════ ADVISOR ═══════════════ -->
-  <section id="asesor" class="advisor-section">
-    <div class="section-inner">
-      <div class="section-label" style="text-align:center">Tu asesor personal</div>
-      <h2 class="section-title" style="text-align:center;margin-bottom:40px">Conoce a Gerardo</h2>
+    <div class="advisor-card">
 
-      <div class="advisor-card">
+      <!-- LEFT PANEL -->
+      <div class="advisor-panel-left">
+        <div class="panel-lines"></div>
 
-        <!-- LEFT PANEL -->
-        <div class="advisor-panel-left">
-          <div class="panel-lines"></div>
-
-          <div class="panel-kia-logo-wrap">
-            <img src="KIA.png" alt="KIA" class="panel-kia-logo" />
-          </div>
-
-          <div class="avatar-wrap">
-            <div class="avatar">
-              <img src="gerardo-foto.png" alt="Gerardo Pineda" class="avatar-photo" />
-              <div class="avatar-online"></div>
-            </div>
-          </div>
-
-          <div class="panel-name">
-            <div class="panel-firstname">Gerardo Pineda</div>
-            <div class="panel-lastname">Quiceno</div>
-          </div>
-
-          <div class="panel-stars">
-            <svg viewBox="0 0 24 24" fill="#f59e0b">
-              <polygon
-                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-            </svg>
-            <svg viewBox="0 0 24 24" fill="#f59e0b">
-              <polygon
-                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-            </svg>
-            <svg viewBox="0 0 24 24" fill="#f59e0b">
-              <polygon
-                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-            </svg>
-            <svg viewBox="0 0 24 24" fill="#f59e0b">
-              <polygon
-                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-            </svg>
-            <svg viewBox="0 0 24 24" fill="#f59e0b">
-              <polygon
-                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-            </svg>
-          </div>
-
-          <div class="certified-badge">Asesor Certificado</div>
+        <div class="panel-kia-logo-wrap">
+          <img src="KIA.png" alt="KIA" class="panel-kia-logo"/>
         </div>
 
-        <!-- RIGHT PANEL -->
-        <div class="advisor-panel-right">
-          <div class="advisor-meta">Asesor Certificado KIA · Almotores</div>
-          <div class="advisor-name">Gerardo Pineda</div>
-
-          <div class="advisor-bio">
-            <p>Soy tu aliado en la compra de tu próximo KIA 🏎️</p>
-            <p>Te acompaño en cada paso — desde elegir el modelo ideal hasta cerrar el negocio con las mejores
-              condiciones.</p>
-            <p>💳 Financiación con tasas competitivas</p>
-            <p>💰 Contado con beneficios</p>
-            <p>📦 Entrega inmediata</p>
-          </div>
-
-          <div class="guarantee-row">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-            </svg>
-            <span>Garantía KIA: 7 años o 150.000 km en todos los modelos</span>
-          </div>
-
-          <div class="contact-rows">
-            <div class="contact-row">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
-                stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="4" width="20" height="16" rx="2" />
-                <polyline points="2,4 12,13 22,4" />
-              </svg>
-              <a href="mailto:gpineda@almotores.com">gpineda@almotores.com</a>
-            </div>
-            <div class="contact-row">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path
-                  d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.65A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z" />
-              </svg>
-              <span>+57 300 5792210</span>
-            </div>
-          </div>
-
-          <div class="social-row">
-            <!-- Instagram ACTIVO -->
-            <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" class="social-btn ig-btn">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
-                stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="2" width="20" height="20" rx="5" />
-                <circle cx="12" cy="12" r="4" />
-                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-              </svg>
-              Instagram
-            </a>
-            <!-- Facebook ACTIVO -->
-            <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" class="social-btn fb-btn">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-              </svg>
-              Facebook
-            </a>
-            <!-- WhatsApp -->
-            <button class="social-btn wa-btn" onclick="openWa()">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
-              </svg>
-              WhatsApp Business
-            </button>
+        <div class="avatar-wrap">
+          <div class="avatar">
+            <img src="gerardo-foto.png" alt="Gerardo Pineda" class="avatar-photo"/>
+            <div class="avatar-online"></div>
           </div>
         </div>
+
+        <div class="panel-name">
+          <div class="panel-firstname">Gerardo Pineda</div>
+        </div>
+
+        <div class="panel-stars">
+          <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+
+        <div class="certified-badge">Asesor Certificado</div>
       </div>
-    </div>
-  </section>
 
-  <!-- ═══════════════ FOOTER ═══════════════ -->
-  <footer class="footer">
-    <img src="KIA.png" alt="KIA" class="footer-kia-logo" />
-    <p class="footer-name">Gerardo Pineda · Asesor Certificado KIA</p>
-    <p class="footer-legal">Precios de lista sujetos a cambios. Consulta disponibilidad y condiciones con tu asesor.</p>
-    <p class="footer-copy">© 2026 · Todos los derechos reservados</p>
-  </footer>
+      <!-- RIGHT PANEL -->
+      <div class="advisor-panel-right">
+        <div class="advisor-meta">Asesor Certificado KIA · Almotores</div>
+        <div class="advisor-name">Gerardo Pineda</div>
 
-  <!-- FAB WhatsApp -->
-  <button class="wa-fab" onclick="openWa()" title="Contactar por WhatsApp">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-      <path
-        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
-    </svg>
-  </button>
-
-  <!-- VEHICLE MODAL -->
-  <div class="modal-overlay" id="vehicleModal" onclick="closeVehicleModal(event)">
-    <div class="modal-box" id="vehicleModalBox">
-      <div class="modal-header">
-        <div>
-          <div class="modal-sub" id="mSub"></div>
-          <div class="modal-title" id="mTitle"></div>
+        <div class="advisor-bio">
+          <p>Soy tu aliado en la compra de tu próximo KIA 🏎️</p>
+          <p>Te acompaño en cada paso — desde elegir el modelo ideal hasta cerrar el negocio con las mejores condiciones.</p>
+          <p>💳 Financiación con tasas competitivas</p>
+          <p>💰 Contado con beneficios</p>
+          <p>📦 Entrega inmediata</p>
         </div>
-        <button class="modal-close" onclick="closeVehicleModalDirect()">✕</button>
-      </div>
-      <div class="modal-img-wrap"><img id="mImg" src="" alt="" /></div>
-      <div class="modal-body">
-        <div class="modal-tag" id="mTag"></div>
-        <p class="modal-desc" id="mDesc"></p>
-        <div class="specs-label">Ficha Técnica</div>
-        <div class="specs-grid" id="mSpecs"></div>
-        <div class="guarantee-row modal-guarantee">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-          </svg>
-          <span>Garantía KIA: 7 años o 150.000 km</span>
+
+        <div class="guarantee-row">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>Garantía KIA: 7 años o 150.000 km en todos los modelos</span>
         </div>
-        <div class="modal-footer-row">
-          <div>
-            <div class="price-label">Precio desde</div>
-            <div class="price-big" id="mPrice"></div>
-            <div class="price-note">*Precio de lista. Consulta condiciones.</div>
+
+        <div class="contact-rows">
+          <div class="contact-row">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+            <a href="mailto:gpineda@almotores.com">gpineda@almotores.com</a>
           </div>
-          <button class="btn-wa" id="mWaBtn">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
-            </svg>
-            Cotizar por WhatsApp
+          <div class="contact-row">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.65A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+            <span>+57 312 2992037</span>
+          </div>
+        </div>
+
+        <div class="social-row">
+          <!-- Instagram ACTIVO -->
+          <a href="#" target="_blank" rel="noreferrer" class="social-btn ig-btn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            Instagram
+          </a>
+          <!-- Facebook ACTIVO -->
+          <a href="#" target="_blank" rel="noreferrer" class="social-btn fb-btn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            Facebook
+          </a>
+          <!-- WhatsApp -->
+          <button class="social-btn wa-btn" onclick="openWa()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            WhatsApp Business
           </button>
         </div>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- WA MENU MODAL -->
-  <div class="modal-overlay wa-overlay" id="waModal" onclick="closeWaModal(event)">
-    <div class="wa-sheet" onclick="event.stopPropagation()">
-      <div class="wa-handle"></div>
-      <div class="wa-header">
-        <div class="wa-avatar">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
-          </svg>
-        </div>
-        <div>
-          <div class="wa-header-name">WhatsApp · Gerardo Pineda</div>
-          <div class="wa-header-sub">¿En qué te puedo ayudar? 🏎️</div>
-        </div>
-        <button class="modal-close" onclick="closeWaModalDirect()">✕</button>
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="footer">
+  <img src="KIA.png" alt="KIA" class="footer-kia-logo"/>
+  <p class="footer-name">Gerardo Pineda · Asesor Certificado KIA</p>
+  <p class="footer-legal">Precios de lista sujetos a cambios. Consulta disponibilidad y condiciones con tu asesor.</p>
+  <p class="footer-copy">© 2026 · Todos los derechos reservados</p>
+</footer>
+
+<!-- FAB WhatsApp -->
+<button class="wa-fab" onclick="openWa()" title="Contactar por WhatsApp">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+</button>
+
+<!-- VEHICLE MODAL -->
+<div class="modal-overlay" id="vehicleModal" onclick="closeVehicleModal(event)">
+  <div class="modal-box" id="vehicleModalBox">
+    <div class="modal-header">
+      <div>
+        <div class="modal-sub" id="mSub"></div>
+        <div class="modal-title" id="mTitle"></div>
       </div>
-      <div class="wa-options" id="waOptions"></div>
-      <div class="wa-footer-note">Serás redirigido a WhatsApp para continuar con Gerardo.</div>
+      <button class="modal-close" onclick="closeVehicleModalDirect()">✕</button>
+    </div>
+    <div class="modal-img-wrap"><img id="mImg" src="" alt=""/></div>
+    <div class="modal-body">
+      <div class="modal-tag" id="mTag"></div>
+      <p class="modal-desc" id="mDesc"></p>
+      <div class="specs-label">Ficha Técnica</div>
+      <div class="specs-grid" id="mSpecs"></div>
+      <div class="guarantee-row modal-guarantee">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>Garantía KIA: 7 años o 150.000 km</span>
+      </div>
+      <div class="modal-footer-row">
+        <div>
+          <div class="price-label">Precio desde</div>
+          <div class="price-big" id="mPrice"></div>
+          <div class="price-note">*Precio de lista. Consulta condiciones.</div>
+        </div>
+        <button class="btn-wa" id="mWaBtn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          Cotizar por WhatsApp
+        </button>
+      </div>
     </div>
   </div>
+</div>
 
-  <script src="app.js"></script>
+<!-- WA MENU MODAL -->
+<div class="modal-overlay wa-overlay" id="waModal" onclick="closeWaModal(event)">
+  <div class="wa-sheet" onclick="event.stopPropagation()">
+    <div class="wa-handle"></div>
+    <div class="wa-header">
+      <div class="wa-avatar">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+      </div>
+      <div>
+        <div class="wa-header-name">WhatsApp · Gerardo Pineda</div>
+        <div class="wa-header-sub">¿En qué te puedo ayudar? 🏎️</div>
+      </div>
+      <button class="modal-close" onclick="closeWaModalDirect()">✕</button>
+    </div>
+    <div class="wa-options" id="waOptions"></div>
+    <div class="wa-footer-note">Serás redirigido a WhatsApp para continuar con Gerardo.</div>
+  </div>
+</div>
+
+<!-- ══ MODAL NOMBRE ANTES DE ABRIR WHATSAPP ══ -->
+<div class="modal-overlay" id="nameModal" onclick="closeNameModal(event)">
+  <div class="name-modal-box" onclick="event.stopPropagation()">
+
+    <div class="name-modal-header">
+      <div class="name-modal-wa-ico">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+      </div>
+      <div>
+        <div class="name-modal-title">Un paso más 👋</div>
+        <div class="name-modal-sub">Gerardo te responderá personalmente</div>
+      </div>
+      <button class="modal-close" onclick="closeNameModalDirect()">✕</button>
+    </div>
+
+    <p class="name-modal-desc">¿Cuál es tu nombre? Así Gerardo puede saludarte como se debe.</p>
+
+    <div class="name-input-wrap">
+      <input
+        type="text"
+        id="nameInput"
+        class="name-input"
+        placeholder="Tu nombre aquí..."
+        maxlength="40"
+        autocomplete="given-name"
+        onkeydown="if(event.key==='Enter') confirmName()"
+      />
+    </div>
+
+    <div class="name-modal-actions">
+      <button class="name-btn-skip" onclick="confirmName(true)">Continuar sin nombre</button>
+      <button class="name-btn-confirm" onclick="confirmName(false)">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+        Ir a WhatsApp
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<script src="app.js"></script>
 </body>
-
 </html>
